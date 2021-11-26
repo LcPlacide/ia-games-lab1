@@ -14,10 +14,15 @@ def corners_heuristic(state, problem):
     corners = problem.corners  # These are the corner coordinates
     walls = problem.walls  # These are the walls of the maze, as a Grid (game.py)
 
-    "*** YOUR CODE HERE ***"
-    return 0
+    # TODO Compute distances - current position to corners
+    distances = [0, 0]
+
+    # Extract max distance
+    max_heuristic = max(distances)
+
+    return max_heuristic
 
 
 if __name__ == '__main__':
     import os
-    os.system('python -m pacman -a SearchAgent -p CornersSearchProblem -s astar_search -f corners_heuristic -l mediumCorners')
+    os.system('python3 -m pacman -a SearchAgent -p CornersSearchProblem -s astar_search -f corners_heuristic -l mediumCorners')
